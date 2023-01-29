@@ -76,7 +76,7 @@ public class Author {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", books=" + books +
+                ", books=[" + books.stream().map(b -> {return " (" + b.getTitle() + ") ";}) + "]" +
                 '}';
     }
 
